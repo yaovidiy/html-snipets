@@ -8,15 +8,9 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 
-export function copyToClipboard(htmlValue: string) {
+export async function copyToClipboard(htmlValue: string) {
 	try {
-		const el = document.createElement('textarea');
-		el.value = htmlValue;
-		document.body.appendChild(el);
-		el.select();
-		document.execCommand('copy');
-		document.body.removeChild(el);
-
+		await navigator.clipboard.writeText(htmlValue);
 		toast.success('Copied to clipboard');
 	} catch (e) {
 		console.error(e);
