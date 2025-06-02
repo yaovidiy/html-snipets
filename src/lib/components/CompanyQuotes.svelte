@@ -173,6 +173,6 @@
 
 <h2 class="text-lg text-center font-bold">How it will look like</h2>
 
-<div class="prose">
+<div class="prose w-full max-w-3xl mx-auto">
 	{@html htmlValue}
 </div>
