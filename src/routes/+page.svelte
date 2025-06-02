@@ -3,6 +3,7 @@
 	import Quates from '$lib/components/Quates.svelte';
 	import TwoPhoneScreens from '$lib/components/TwoPhoneScreens.svelte';
 	import PhoneWithGrid from '$lib/components/PhoneWithGrid.svelte';
+	import CompanyQuotes from '$lib/components/CompanyQuotes.svelte';
 </script>
 
 <svelte:head>
@@ -15,6 +16,7 @@
 			<Tabs.Trigger value="quates">Quote</Tabs.Trigger>
 			<Tabs.Trigger value="twoPhoneScreens">Two phone sreens</Tabs.Trigger>
 			<Tabs.Trigger value="phoneWithGrid">Phone with Grid</Tabs.Trigger>
+			<Tabs.Trigger value="companyQuotes">Company Quotes</Tabs.Trigger>
 		</Tabs.List>
 		<Tabs.Content class="overflow-x-hidden" value="quates">
 			<Quates />
@@ -24,6 +26,9 @@
 		</Tabs.Content>
 		<Tabs.Content value="phoneWithGrid">
 			<PhoneWithGrid />
+		</Tabs.Content>
+		<Tabs.Content value="companyQuotes">
+			<CompanyQuotes />
 		</Tabs.Content>
 	</Tabs.Root>
 </main>
